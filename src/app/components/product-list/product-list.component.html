@@ -1,3 +1,22 @@
-<p *ngFor="let product of products">
-  {{product.name}}: {{product.unitPrice | currency: "EUR"}}
-</p>
+<div class="table-responsive">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th></th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Units in stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td class="align-middle">
+          <img src="{{product.imageUrl}}" alt="Product image" height="50">
+        </td>
+        <td class="align-middle" scope="row">{{product.name}}</td>
+        <td class="align-middle">{{product.unitPrice | currency: "EUR"}}</td>
+        <td class="align-middle">{{product.unitsInStock}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
