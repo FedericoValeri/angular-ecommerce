@@ -6,10 +6,11 @@ import { ProductListComponent } from './components/product-list/product-list.com
 
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/product.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, ProductListComponent],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, FontAwesomeModule],
   providers: [ProductService],
   bootstrap: [AppComponent],
 })
